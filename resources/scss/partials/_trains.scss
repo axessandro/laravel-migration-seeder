@@ -1,0 +1,18 @@
+.container{
+    padding-top: 2rem;
+}
+
+.train-card{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: rgb(155, 155, 155);
+    margin-bottom: 2rem;
+    border-radius: 20px;
+
+    .infos{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+}
