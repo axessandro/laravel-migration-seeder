@@ -11,31 +11,29 @@
 
                         <div class="train-card">
                             <div class="train-info infos">
-                                <div class="company">{{ $train->company }}</div>
-                                <div class="train-code">{{ $train->train_code }}</div>
+                                <div class="company">Compagnia: {{ $train->company }}</div>
+                                <div class="train-code">Codice treno: {{ $train->train_code }}</div>
                             </div>
 
                             <div class="start-info infos">
-                                <h5>Partenza</h5>
-                                <div class="start-station">Stazione: {{ $train->start_station }}</div>
-                                <div class="start-hour">{{ $train->start_hour }}</div>
+                                <div class="start-station">Stazione partenza: {{ $train->start_station }}</div>
+                                <div class="start-hour">Orario partenza: {{ $train->start_hour }}</div>
                             </div>
 
                             <div class="end-info infos">
-                                <h5>Arrivo</h5>
-                                <div class="end-station">{{ $train->end_station }}</div>
-                                <div class="end-hour">{{ $train->start_hour }}</div>
+                                <div class="end-station">Stazione arrivo: {{ $train->end_station }}</div>
+                                <div class="end-hour">Orario arrivo: {{ $train->end_hour }}</div>
                             </div>
 
                             <div class="details infos">
                                 <div class="in-time">
-                                    @if ($train->in_time === 1)
-                                        <span>Ritardo</span>
+                                    @if ($train->in_time === 0)
+                                        <span class="text-warning">Ritardo</span>
                                     @endif
                                 </div>
                                 <div class="deleted">
-                                    @if ($train->deleted === 0)
-                                        <span>Cancellato</span>
+                                    @if ($train->deleted === 1)
+                                        <span class="text-danger">Cancellato</span>
                                     @endif
                                 </div>
                             </div>
